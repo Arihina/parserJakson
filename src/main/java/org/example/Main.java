@@ -37,8 +37,8 @@ public class Main {
 
             nodes = mapper.readTree(valutes);
             for (var node : nodes) {
-                System.out.print(node.get("CharCode") + " ");
-                System.out.println(node.get("Value"));
+                System.out.print(node.get("CharCode").toString() + " ");
+                System.out.println(node.get("Value").asDouble());
             }
 
         } catch (Exception e) {
@@ -70,7 +70,7 @@ public class Main {
 
             for (int i = 0; i < pairs.size(); i++) {
                 if (pairs.get(i).toString().contains("USDT")) {
-                    System.out.println(pairs.get(i) + " : " + prices.get(i));
+                    System.out.println(pairs.get(i).toString() + " : " + prices.get(i).asDouble());
                 }
             }
 
